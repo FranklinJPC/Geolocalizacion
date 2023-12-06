@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Mi ubicación
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
@@ -16,5 +16,27 @@
   <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+  
+
+  <div class="ion-padding">
+    <ion-button (click)="getCurrentCoordinates()" expand="block">Obtener ubicación</ion-button>
+    <ion-list>
+      <ion-list-header>
+        Coordenadas de ubicación
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Latitud</ion-label>
+        <ion-badge color="danger" slot="end">{{latitude}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Longitud</ion-label>
+        <ion-badge color="danger" slot="end">{{longitude}}</ion-badge>
+      </ion-item>
+    </ion-list>
+    <a (click)="getURLMap()">
+      <ion-button expand="block">Obtener ubicación</ion-button>
+    </a>
+    <ion-button (click)="sendUbicacion()" expand="block">Enviar ubicación</ion-button>
   </div>
 </ion-content>
