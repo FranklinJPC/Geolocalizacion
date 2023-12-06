@@ -28,7 +28,8 @@ export class HomePage {
     });
   }
   getURLMap() {
-    return `https://maps.google.com/?q=${this.latitude},${this.longitude}`;
+    const enlace = `https://maps.google.com/?q=${this.latitude},${this.longitude}`;
+    window.open(enlace, '_system');
   }
   sendUbicacion() {
     this.ubicacionBD.addUbicacion(this.longitude, this.latitude).then(() => {

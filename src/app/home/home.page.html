@@ -34,9 +34,11 @@
         <ion-badge color="danger" slot="end">{{longitude}}</ion-badge>
       </ion-item>
     </ion-list>
-    <a (click)="getURLMap()">
-      <ion-button expand="block">Obtener ubicación</ion-button>
-    </a>
+    <ion-item>
+      <a (click)="getURLMap()">
+        <ion-button expand="block">Obtener ubicación</ion-button>
+      </a>
+    </ion-item>
     <ion-button (click)="sendUbicacion()" expand="block">Enviar ubicación</ion-button>
   </div>
 </ion-content>
